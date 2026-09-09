@@ -1,0 +1,44 @@
+{
+  "coins": 1,
+  "completed": [
+    false,
+    false,
+    true,
+    false,
+    true,
+    false,
+    false,
+    false,
+    true,
+    true
+  ],
+  "selected_skin": 3,
+  "owned_skins": [
+    0,
+    2,
+    3,
+    4
+  ],
+  "owned_game_icon_ids": [
+    0,
+    3,
+    5,
+    7,
+    8,
+    9
+  ],
+  "selected_game_icons": {
+    "CUBE": 0,
+    "SHIP": 3,
+    "BALL": 5,
+    "SPIDER": 7,
+    "ROBOT": 8,
+    "WAVE": 9
+  },
+  "music_vol": 0.7,
+  "sfx_vol": 0.7,
+  "fullscreen": true,
+  "reduce_motion": false,
+  "show_fps": true,
+  "particles": true
+}

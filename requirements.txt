@@ -1,0 +1,2 @@
+# Python 3.14+ için tekerlek destekli sürüm (kod yine `import pygame` kullanır)
+pygame-ce>=2.5.0

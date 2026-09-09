@@ -1,0 +1,22 @@
+"""Ekran ve genel sabitler."""
+
+SCREEN_W = 1280
+SCREEN_H = 720
+FPS = 60
+
+PLAYER_SCREEN_X = 240
+PLAYER_SIZE = 28
+
+SAVE_PATH = "save.json"
+
+# Renk paleti
+BG_TOP = (24, 28, 48)
+BG_BOTTOM = (12, 14, 28)
+UI_TEXT = (235, 240, 255)
+UI_ACCENT = (120, 200, 255)
+UI_BUTTON = (55, 65, 95)
+UI_BUTTON_HOVER = (75, 90, 130)
+SPIKE = (220, 60, 80)
+BLOCK = (70, 75, 110)
+PORTAL_GLOW = (180, 220, 255)
+SPEED_GATE = (95, 235, 140)
