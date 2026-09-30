@@ -1,4 +1,4 @@
-"""Moda göre fizik — Cube, Ship, Ball, Spider, Robot, Wave."""
+﻿"""Moda gÃ¶re fizik â€” Cube, Ship, Ball, Spider, Robot, Wave."""
 
 from __future__ import annotations
 

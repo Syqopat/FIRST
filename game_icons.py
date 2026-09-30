@@ -1,4 +1,4 @@
-"""Mod başına kozmetik ikonlar (10 adet) — mağaza + Hub seçimi."""
+﻿"""Mod baÅŸÄ±na kozmetik ikonlar (10 adet) â€” maÄŸaza + Hub seÃ§imi."""
 
 from __future__ import annotations
 
@@ -10,13 +10,13 @@ from game.modes import GameMode
 
 GAME_ICONS: list[dict[str, Any]] = [
     {"id": 0, "mode": GameMode.CUBE, "name": "Kare", "price": 0, "p": (110, 190, 255), "a": (40, 60, 120), "kind": "cube"},
-    {"id": 1, "mode": GameMode.CUBE, "name": "Kapsül", "price": 48, "p": (255, 200, 90), "a": (140, 80, 20), "kind": "capsule"},
-    {"id": 2, "mode": GameMode.CUBE, "name": "Çekirdek", "price": 72, "p": (120, 255, 200), "a": (20, 100, 80), "kind": "core"},
+    {"id": 1, "mode": GameMode.CUBE, "name": "KapsÃ¼l", "price": 48, "p": (255, 200, 90), "a": (140, 80, 20), "kind": "capsule"},
+    {"id": 2, "mode": GameMode.CUBE, "name": "Ã‡ekirdek", "price": 72, "p": (120, 255, 200), "a": (20, 100, 80), "kind": "core"},
     {"id": 3, "mode": GameMode.SHIP, "name": "Delta", "price": 0, "p": (255, 140, 90), "a": (120, 40, 20), "kind": "ship_a"},
     {"id": 4, "mode": GameMode.SHIP, "name": "Kanat", "price": 52, "p": (200, 160, 255), "a": (80, 40, 140), "kind": "ship_b"},
     {"id": 5, "mode": GameMode.BALL, "name": "Top", "price": 0, "p": (180, 100, 255), "a": (60, 20, 100), "kind": "ball"},
     {"id": 6, "mode": GameMode.BALL, "name": "Halka", "price": 58, "p": (100, 240, 255), "a": (20, 80, 120), "kind": "ring"},
-    {"id": 7, "mode": GameMode.SPIDER, "name": "Tırnak", "price": 0, "p": (90, 255, 150), "a": (20, 90, 50), "kind": "spider"},
+    {"id": 7, "mode": GameMode.SPIDER, "name": "TÄ±rnak", "price": 0, "p": (90, 255, 150), "a": (20, 90, 50), "kind": "spider"},
     {"id": 8, "mode": GameMode.ROBOT, "name": "Bot", "price": 0, "p": (255, 220, 80), "a": (120, 80, 20), "kind": "robot"},
     {"id": 9, "mode": GameMode.WAVE, "name": "Dalga", "price": 0, "p": (100, 230, 255), "a": (30, 90, 130), "kind": "wave"},
 ]
@@ -129,7 +129,7 @@ def draw_game_icon_rotated(
     mode: GameMode,
     angle_deg: float,
 ) -> None:
-    """Havada dönen ikon — pygame.rotate saat yönü tersi için işaret."""
+    """Havada dÃ¶nen ikon â€” pygame.rotate saat yÃ¶nÃ¼ tersi iÃ§in iÅŸaret."""
     pad = max(rect.w, rect.h)
     side = int(pad * 1.65)
     tmp = pygame.Surface((side, side), pygame.SRCALPHA)

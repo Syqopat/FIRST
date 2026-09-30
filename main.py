@@ -1,4 +1,4 @@
-"""Geometry Run — giriş noktası."""
+﻿"""Geometry Run â€” giriÅŸ noktasÄ±."""
 
 from __future__ import annotations
 

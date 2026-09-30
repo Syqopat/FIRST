@@ -1,4 +1,4 @@
-"""10 bölüm: zorluk, hız, uzunluk ve nesneler (blok, diken, portal)."""
+﻿"""10 bÃ¶lÃ¼m: zorluk, hÄ±z, uzunluk ve nesneler (blok, diken, portal)."""
 
 from __future__ import annotations
 
@@ -30,10 +30,9 @@ def _gate(x: float, speed: float, y: float | None = None, w: float = 46, h: floa
 
 
 def build_levels() -> list[dict[str, Any]]:
-    """Zorluk 1–10 artar; her bölümde farklı portal dizilimi."""
+    """Zorluk 1â€“10 artar; her bÃ¶lÃ¼mde farklÄ± portal dizilimi."""
     L: list[dict[str, Any]] = []
 
-    # 1 — Cube tanıtım (taban hız düşük; hız kapıları ile artar)
     L.append(
         {
             "name": "Nefes",
@@ -56,10 +55,9 @@ def build_levels() -> list[dict[str, Any]]:
         }
     )
 
-    # 2 — Ship portalı
     L.append(
         {
-            "name": "Rüzgar",
+            "name": "RÃ¼zgar",
             "difficulty": 2,
             "scroll_speed": 74,
             "length": 3000,
@@ -80,10 +78,9 @@ def build_levels() -> list[dict[str, Any]]:
         }
     )
 
-    # 3 — Ball
     L.append(
         {
-            "name": "Yerçekimi",
+            "name": "YerÃ§ekimi",
             "difficulty": 3,
             "scroll_speed": 72,
             "length": 3200,
@@ -104,7 +101,6 @@ def build_levels() -> list[dict[str, Any]]:
         }
     )
 
-    # 4 — Robot (zıplama süresi)
     L.append(
         {
             "name": "Mekanik",
@@ -128,7 +124,6 @@ def build_levels() -> list[dict[str, Any]]:
         }
     )
 
-    # 5 — Wave kısa
     L.append(
         {
             "name": "Dalga",
@@ -150,7 +145,6 @@ def build_levels() -> list[dict[str, Any]]:
         }
     )
 
-    # 6 — Spider
     L.append(
         {
             "name": "Tavan",
@@ -173,10 +167,9 @@ def build_levels() -> list[dict[str, Any]]:
         }
     )
 
-    # 7 — Karışık portal zinciri
     L.append(
         {
-            "name": "Geçit",
+            "name": "GeÃ§it",
             "difficulty": 7,
             "scroll_speed": 78,
             "length": 4200,
@@ -199,7 +192,6 @@ def build_levels() -> list[dict[str, Any]]:
         }
     )
 
-    # 8 — Wave + diken koridoru
     L.append(
         {
             "name": "Dar Koridor",
@@ -225,7 +217,6 @@ def build_levels() -> list[dict[str, Any]]:
         }
     )
 
-    # 9 — Yoğun
     L.append(
         {
             "name": "Kaos",
@@ -254,10 +245,9 @@ def build_levels() -> list[dict[str, Any]]:
         }
     )
 
-    # 10 — Final
     L.append(
         {
-            "name": "Son Sınır",
+            "name": "Son SÄ±nÄ±r",
             "difficulty": 10,
             "scroll_speed": 84,
             "length": 5200,

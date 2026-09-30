@@ -1,4 +1,4 @@
-"""Geometry Dash tarzı oyun modları ve portal renkleri."""
+﻿"""Geometry Dash tarzÄ± oyun modlarÄ± ve portal renkleri."""
 
 from __future__ import annotations
 
@@ -23,7 +23,6 @@ MODE_ORDER: list[GameMode] = [
     GameMode.WAVE,
 ]
 
-# Portal çerçeve rengi (mod ayırt — GD benzeri)
 PORTAL_COLORS: dict[GameMode, tuple[int, int, int]] = {
     GameMode.CUBE: (120, 200, 255),
     GameMode.SHIP: (255, 140, 90),

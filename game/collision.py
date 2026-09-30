@@ -1,4 +1,4 @@
-"""Üçgen diken vs AABB — harici kütüphane yok."""
+﻿"""ÃœÃ§gen diken vs AABB â€” harici kÃ¼tÃ¼phane yok."""
 
 from __future__ import annotations
 
@@ -44,7 +44,7 @@ def triangle_hits_rect(
     c: tuple[float, float],
     rect: pygame.Rect,
 ) -> bool:
-    """Dik üçgen (a sol-alt, b tepe, c sağ-alt) ile oyuncu AABB."""
+    """Dik Ã¼Ã§gen (a sol-alt, b tepe, c saÄŸ-alt) ile oyuncu AABB."""
     margin = 3
     r = rect.inflate(-margin * 2, -margin * 2)
     if r.w < 4 or r.h < 4:

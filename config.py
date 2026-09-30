@@ -1,4 +1,4 @@
-"""Ekran ve genel sabitler."""
+﻿"""Ekran ve genel sabitler."""
 
 SCREEN_W = 1280
 SCREEN_H = 720
@@ -9,7 +9,6 @@ PLAYER_SIZE = 28
 
 SAVE_PATH = "save.json"
 
-# Renk paleti
 BG_TOP = (24, 28, 48)
 BG_BOTTOM = (12, 14, 28)
 UI_TEXT = (235, 240, 255)

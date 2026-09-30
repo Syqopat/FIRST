@@ -1,4 +1,4 @@
-"""Oyuncu ilerlemesi ve ayarlar — JSON."""
+﻿"""Oyuncu ilerlemesi ve ayarlar â€” JSON."""
 
 from __future__ import annotations
 

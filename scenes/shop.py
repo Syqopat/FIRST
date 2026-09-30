@@ -1,4 +1,4 @@
-"""Skinler ve mod ikonları — sekmeli mağaza."""
+﻿"""Skinler ve mod ikonlarÄ± â€” sekmeli maÄŸaza."""
 
 from __future__ import annotations
 
@@ -17,7 +17,7 @@ class ShopScene(Scene):
         self.btn_back = Button(pygame.Rect(36, 36, 160, 46), "Hub", self.app.font_ui)
         cx = SCREEN_W // 2
         self.btn_tab_skins = Button(pygame.Rect(cx - 210, 118, 200, 42), "Skinler", self.app.font_ui)
-        self.btn_tab_icons = Button(pygame.Rect(cx + 10, 118, 200, 42), "Mod ikonları", self.app.font_ui)
+        self.btn_tab_icons = Button(pygame.Rect(cx + 10, 118, 200, 42), "Mod ikonlarÄ±", self.app.font_ui)
         self.tab: str = "skins"
         self._rebuild()
 
@@ -34,7 +34,7 @@ class ShopScene(Scene):
                 price = int(s["price"])
                 b = Button(
                     pygame.Rect(SCREEN_W - 260, y, 220, 40),
-                    f"Satın al ({price})",
+                    f"SatÄ±n al ({price})",
                     self.app.font_ui,
                     data=("skin", sid),
                 )
@@ -49,7 +49,7 @@ class ShopScene(Scene):
                 price = int(ic["price"])
                 b = Button(
                     pygame.Rect(SCREEN_W - 260, y, 220, 40),
-                    f"Satın al ({price})",
+                    f"SatÄ±n al ({price})",
                     self.app.font_ui,
                     data=("gicon", iid),
                 )
@@ -105,7 +105,7 @@ class ShopScene(Scene):
     def draw(self, surf: pygame.Surface) -> None:
         draw_gradient_bg(surf, (24, 20, 44), (10, 10, 24))
         self.btn_back.draw(surf, (UI_BUTTON, UI_BUTTON_HOVER, UI_TEXT))
-        t = self.app.font_title.render("Mağaza", True, UI_ACCENT)
+        t = self.app.font_title.render("MaÄŸaza", True, UI_ACCENT)
         surf.blit(t, (SCREEN_W // 2 - t.get_width() // 2, 72))
         c = self.app.font_ui.render(f"Paran: {self.app.save.coins}", True, UI_TEXT)
         surf.blit(c, (SCREEN_W // 2 - c.get_width() // 2, 122))
@@ -131,7 +131,7 @@ class ShopScene(Scene):
         y = 188
         row_h = 52
         if self.tab == "skins":
-            sub = self.app.font_large.render("Menü renk paketleri", True, UI_ACCENT)
+            sub = self.app.font_large.render("MenÃ¼ renk paketleri", True, UI_ACCENT)
             surf.blit(sub, (60, 158))
             for s in SKINS:
                 sid = int(s["id"])
@@ -149,7 +149,7 @@ class ShopScene(Scene):
                 surf.blit(st, (118, y + 26))
                 y += row_h
         else:
-            sub = self.app.font_large.render("Oyun içi mod ikonları", True, UI_ACCENT)
+            sub = self.app.font_large.render("Oyun iÃ§i mod ikonlarÄ±", True, UI_ACCENT)
             surf.blit(sub, (60, 158))
             for ic in GAME_ICONS:
                 iid = int(ic["id"])

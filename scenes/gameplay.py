@@ -1,4 +1,4 @@
-"""Kaydırmalı bölüm — diken (üçgen hitbox), hız kapıları, ikon dönüşü."""
+﻿"""KaydÄ±rmalÄ± bÃ¶lÃ¼m â€” diken (Ã¼Ã§gen hitbox), hÄ±z kapÄ±larÄ±, ikon dÃ¶nÃ¼ÅŸÃ¼."""
 
 from __future__ import annotations
 
@@ -52,7 +52,7 @@ class GameplayScene(Scene):
         self._icon_angle = 0.0
         f = self.app.font_ui
         self.btn_retry = Button(pygame.Rect(SCREEN_W // 2 - 220, SCREEN_H // 2 + 100, 200, 48), "Tekrar", f)
-        self.btn_menu = Button(pygame.Rect(SCREEN_W // 2 + 20, SCREEN_H // 2 + 100, 200, 48), "Menü", f)
+        self.btn_menu = Button(pygame.Rect(SCREEN_W // 2 + 20, SCREEN_H // 2 + 100, 200, 48), "MenÃ¼", f)
 
     def handle(self, events: list[pygame.event.Event]) -> None:
         for e in events:
@@ -241,7 +241,7 @@ class GameplayScene(Scene):
         surf.blit(mode_txt, (24, 20))
         att = self.app.font_small.render(f"Deneme: {self.attempt}", True, (200, 210, 230))
         surf.blit(att, (24, 46))
-        spd_txt = self.app.font_small.render(f"Hız: {int(self.run_speed)}", True, (160, 200, 255))
+        spd_txt = self.app.font_small.render(f"HÄ±z: {int(self.run_speed)}", True, (160, 200, 255))
         surf.blit(spd_txt, (24, 68))
 
         prog = min(1.0, self.scroll / max(float(self.data["length"]), 1.0))
@@ -256,19 +256,19 @@ class GameplayScene(Scene):
             surf.blit(s, (int(p["x"]) - 4, int(p["y"]) - 4))
 
         if self.pause:
-            self._draw_overlay(surf, "Duraklatıldı", "ESC: devam", show_buttons=False)
+            self._draw_overlay(surf, "DuraklatÄ±ldÄ±", "ESC: devam", show_buttons=False)
 
         if self.dead:
             self._draw_overlay(
                 surf,
                 "Diken!",
-                f"Deneme {self.attempt} — Tekrar veya Menü",
+                f"Deneme {self.attempt} â€” Tekrar veya MenÃ¼",
                 show_buttons=True,
             )
 
         if self.won:
-            msg = f"Bölüm bitti! +{getattr(self, '_last_reward', 0)} para"
-            self._draw_overlay(surf, "Tamamdır", msg, show_buttons=True)
+            msg = f"BÃ¶lÃ¼m bitti! +{getattr(self, '_last_reward', 0)} para"
+            self._draw_overlay(surf, "TamamdÄ±r", msg, show_buttons=True)
 
     def _draw_overlay(self, surf: pygame.Surface, title: str, sub: str, show_buttons: bool) -> None:
         ov = pygame.Surface((SCREEN_W, SCREEN_H), pygame.SRCALPHA)

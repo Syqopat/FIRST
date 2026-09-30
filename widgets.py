@@ -1,4 +1,4 @@
-"""Basit düğme ve tıklama yardımcıları."""
+﻿"""Basit dÃ¼ÄŸme ve tÄ±klama yardÄ±mcÄ±larÄ±."""
 
 from __future__ import annotations
 

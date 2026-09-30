@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import pygame
 
@@ -17,7 +17,7 @@ class MainMenuScene(Scene):
         )
         self.btn_quit = Button(
             pygame.Rect(SCREEN_W // 2 - 120, SCREEN_H // 2 + 70, 240, 52),
-            "Çıkış",
+            "Ã‡Ä±kÄ±ÅŸ",
             self.app.font_ui,
         )
 
@@ -37,7 +37,7 @@ class MainMenuScene(Scene):
         draw_gradient_bg(surf, (28, 32, 72), (10, 12, 28))
         title = self.app.font_title.render("Geometry Run", True, UI_ACCENT)
         surf.blit(title, title.get_rect(center=(SCREEN_W // 2, 120)))
-        sub = self.app.font_ui.render("Oyun doğrudan Hub ile açılır — buradan da girebilirsin.", True, UI_TEXT)
+        sub = self.app.font_ui.render("Oyun doÄŸrudan Hub ile aÃ§Ä±lÄ±r â€” buradan da girebilirsin.", True, UI_TEXT)
         surf.blit(sub, sub.get_rect(center=(SCREEN_W // 2, 175)))
         colors = (UI_BUTTON, UI_BUTTON_HOVER, UI_TEXT)
         self.btn_start.draw(surf, colors)

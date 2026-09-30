@@ -1,4 +1,4 @@
-"""Sahne geçişi — kararma / açılma."""
+﻿"""Sahne geÃ§iÅŸi â€” kararma / aÃ§Ä±lma."""
 
 from __future__ import annotations
 

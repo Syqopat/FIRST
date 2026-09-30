@@ -1,4 +1,4 @@
-"""Görüntü, erişilebilirlik, ses ve tehlikeli sıfırlama."""
+﻿"""GÃ¶rÃ¼ntÃ¼, eriÅŸilebilirlik, ses ve tehlikeli sÄ±fÄ±rlama."""
 
 from __future__ import annotations
 
@@ -25,16 +25,16 @@ class SettingsScene(Scene):
         self.btn_fps = Button(pygame.Rect(cx - 220, 430, 210, 44), "", self.app.font_ui)
         self.btn_particles = Button(pygame.Rect(cx + 10, 430, 210, 44), "", self.app.font_ui)
 
-        self.btn_reset = Button(pygame.Rect(cx - 220, 520, 280, 46), "İlerlemeyi sıfırla", self.app.font_ui)
+        self.btn_reset = Button(pygame.Rect(cx - 220, 520, 280, 46), "Ä°lerlemeyi sÄ±fÄ±rla", self.app.font_ui)
         self._reset_armed = False
         self._reset_timer = 0.0
 
     def _sync_labels(self) -> None:
         s = self.app.save
-        self.btn_fullscreen.label = f"Tam ekran: {'Açık' if s.fullscreen else 'Kapalı'}"
-        self.btn_motion.label = f"Hızlı geçiş (animasyonsuz): {'Açık' if s.reduce_motion else 'Kapalı'}"
-        self.btn_fps.label = f"FPS göstergesi: {'Açık' if s.show_fps else 'Kapalı'}"
-        self.btn_particles.label = f"Ölüm parçacıkları: {'Açık' if s.particles else 'Kapalı'}"
+        self.btn_fullscreen.label = f"Tam ekran: {'AÃ§Ä±k' if s.fullscreen else 'KapalÄ±'}"
+        self.btn_motion.label = f"HÄ±zlÄ± geÃ§iÅŸ (animasyonsuz): {'AÃ§Ä±k' if s.reduce_motion else 'KapalÄ±'}"
+        self.btn_fps.label = f"FPS gÃ¶stergesi: {'AÃ§Ä±k' if s.show_fps else 'KapalÄ±'}"
+        self.btn_particles.label = f"Ã–lÃ¼m parÃ§acÄ±klarÄ±: {'AÃ§Ä±k' if s.particles else 'KapalÄ±'}"
 
     def handle(self, events: list[pygame.event.Event]) -> None:
         s = self.app.save
@@ -118,7 +118,7 @@ class SettingsScene(Scene):
         surf.blit(t, t.get_rect(center=(SCREEN_W // 2, 96)))
 
         s = self.app.save
-        m = self.app.font_ui.render(f"Müzik: {int(s.music_vol * 100)}%", True, UI_TEXT)
+        m = self.app.font_ui.render(f"MÃ¼zik: {int(s.music_vol * 100)}%", True, UI_TEXT)
         surf.blit(m, m.get_rect(center=(SCREEN_W // 2, 138)))
         self.btn_m_down.draw(surf, (UI_BUTTON, UI_BUTTON_HOVER, UI_TEXT))
         self.btn_m_up.draw(surf, (UI_BUTTON, UI_BUTTON_HOVER, UI_TEXT))
@@ -129,7 +129,7 @@ class SettingsScene(Scene):
         self.btn_s_up.draw(surf, (UI_BUTTON, UI_BUTTON_HOVER, UI_TEXT))
 
         sec = self.app.font_small.render(
-            "Görünüm ve performans — tam ekran anında uygulanır.", True, (150, 160, 185)
+            "GÃ¶rÃ¼nÃ¼m ve performans â€” tam ekran anÄ±nda uygulanÄ±r.", True, (150, 160, 185)
         )
         surf.blit(sec, sec.get_rect(center=(SCREEN_W // 2, 292)))
 
@@ -140,18 +140,18 @@ class SettingsScene(Scene):
         self.btn_particles.draw(surf, cols)
 
         tip = self.app.font_small.render(
-            "Ses şimdilik menülerde kayıtlı; ileride müzik/SFX bağlanabilir.",
+            "Ses ÅŸimdilik menÃ¼lerde kayÄ±tlÄ±; ileride mÃ¼zik/SFX baÄŸlanabilir.",
             True,
             (130, 140, 165),
         )
         surf.blit(tip, tip.get_rect(center=(SCREEN_W // 2, 492)))
 
         rs = (
-            "Emin misin? Tekrar tıkla (süre dolmadan)"
+            "Emin misin? Tekrar tÄ±kla (sÃ¼re dolmadan)"
             if self._reset_armed
-            else "İlerlemeyi sıfırla: para, bölümler, skin ve ikonlar (ayarlar kalır)"
+            else "Ä°lerlemeyi sÄ±fÄ±rla: para, bÃ¶lÃ¼mler, skin ve ikonlar (ayarlar kalÄ±r)"
         )
-        self.btn_reset.label = "İlerlemeyi sıfırla — ONAY" if self._reset_armed else "İlerlemeyi sıfırla"
+        self.btn_reset.label = "Ä°lerlemeyi sÄ±fÄ±rla â€” ONAY" if self._reset_armed else "Ä°lerlemeyi sÄ±fÄ±rla"
         self.btn_reset.draw(surf, ((90, 50, 70), (120, 70, 90), UI_TEXT) if self._reset_armed else cols)
         rx = self.app.font_small.render(rs, True, (255, 180, 160) if self._reset_armed else (160, 170, 190))
         surf.blit(rx, rx.get_rect(center=(SCREEN_W // 2, SCREEN_H - 28)))

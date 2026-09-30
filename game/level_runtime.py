@@ -1,4 +1,4 @@
-"""Seviye verisini çarpışma listelerine dönüştürür."""
+﻿"""Seviye verisini Ã§arpÄ±ÅŸma listelerine dÃ¶nÃ¼ÅŸtÃ¼rÃ¼r."""
 
 from __future__ import annotations
 

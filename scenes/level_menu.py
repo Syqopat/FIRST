@@ -1,4 +1,4 @@
-"""10 bölüm — sol/sağ ok ve klavye; döngüsel gezinme."""
+﻿"""10 bÃ¶lÃ¼m â€” sol/saÄŸ ok ve klavye; dÃ¶ngÃ¼sel gezinme."""
 
 from __future__ import annotations
 
@@ -18,10 +18,10 @@ class LevelMenuScene(Scene):
         self._hover_right = False
 
     def _layout(self) -> None:
-        self.btn_back = Button(pygame.Rect(36, 36, 150, 46), "Hub'a dön", self.app.font_ui)
+        self.btn_back = Button(pygame.Rect(36, 36, 150, 46), "Hub'a dÃ¶n", self.app.font_ui)
         self.btn_play_level = Button(
             pygame.Rect(SCREEN_W // 2 - 140, SCREEN_H - 160, 280, 62),
-            "Bölümü Oyna",
+            "BÃ¶lÃ¼mÃ¼ Oyna",
             self.app.font_large,
         )
         aw, ah = 72, 128
@@ -61,21 +61,21 @@ class LevelMenuScene(Scene):
         title = self.app.font_title.render(f"{self.index + 1}. {lv['name']}", True, UI_ACCENT)
         surf.blit(title, title.get_rect(center=(SCREEN_W // 2, 100)))
 
-        stars = "★" * diff + "☆" * (10 - diff)
+        stars = "â˜…" * diff + "â˜†" * (10 - diff)
         st = self.app.font_large.render(stars, True, (255, 220, 120))
         surf.blit(st, st.get_rect(center=(SCREEN_W // 2, 158)))
 
         rew = self.app.save.completed[self.index]
         tip = (
-            "Tamamlandı — tekrar oynayınca daha az para."
+            "TamamlandÄ± â€” tekrar oynayÄ±nca daha az para."
             if rew
-            else "İlk kez bitirince ekstra ödül!"
+            else "Ä°lk kez bitirince ekstra Ã¶dÃ¼l!"
         )
         t2 = self.app.font_ui.render(tip, True, UI_TEXT)
         surf.blit(t2, t2.get_rect(center=(SCREEN_W // 2, 200)))
 
         spd = self.app.font_ui.render(
-            f"Hız: {lv['scroll_speed']}   Uzunluk: {lv['length']} px", True, UI_TEXT
+            f"HÄ±z: {lv['scroll_speed']}   Uzunluk: {lv['length']} px", True, UI_TEXT
         )
         surf.blit(spd, spd.get_rect(center=(SCREEN_W // 2, 236)))
 
@@ -103,7 +103,6 @@ class LevelMenuScene(Scene):
         draw_arrow_box(self.arrow_left, self._hover_left)
         draw_arrow_box(self.arrow_right, self._hover_right)
 
-        # Sol ok (← uç sol tarafta)
         pygame.draw.polygon(
             surf,
             UI_ACCENT,
@@ -113,7 +112,6 @@ class LevelMenuScene(Scene):
                 (self.arrow_left.right - 10, self.arrow_left.bottom - 16),
             ],
         )
-        # Sağ ok
         pygame.draw.polygon(
             surf,
             UI_ACCENT,
@@ -125,7 +123,7 @@ class LevelMenuScene(Scene):
         )
 
         hint = self.app.font_small.render(
-            "Sol / Sağ ok veya ← → tuşları — 10. bölümde sağ: 1'e döner",
+            "Sol / SaÄŸ ok veya â† â†’ tuÅŸlarÄ± â€” 10. bÃ¶lÃ¼mde saÄŸ: 1'e dÃ¶ner",
             True,
             (160, 170, 200),
         )

@@ -1,4 +1,4 @@
-"""Skin + mod ikonları — Hub'dan ayrı tam ekran menü."""
+﻿"""Skin + mod ikonlarÄ± â€” Hub'dan ayrÄ± tam ekran menÃ¼."""
 
 from __future__ import annotations
 
@@ -15,7 +15,7 @@ from widgets import Button, draw_gradient_bg
 
 class IconMenuScene(Scene):
     def on_enter(self, **kwargs) -> None:
-        self.btn_back = Button(pygame.Rect(36, 36, 200, 46), "Hub'a dön", self.app.font_ui)
+        self.btn_back = Button(pygame.Rect(36, 36, 200, 46), "Hub'a dÃ¶n", self.app.font_ui)
         self.icon_mode = GameMode.CUBE
         self.skin_rects: list[tuple[pygame.Rect, int]] = []
         self.mode_pills: list[tuple[pygame.Rect, GameMode]] = []
@@ -63,10 +63,10 @@ class IconMenuScene(Scene):
         draw_gradient_bg(surf, (24, 28, 58), (12, 14, 30))
         self.btn_back.draw(surf, (UI_BUTTON, UI_BUTTON_HOVER, UI_TEXT))
 
-        t = self.app.font_title.render("Görünüm", True, UI_ACCENT)
+        t = self.app.font_title.render("GÃ¶rÃ¼nÃ¼m", True, UI_ACCENT)
         surf.blit(t, t.get_rect(center=(SCREEN_W // 2, 78)))
 
-        lab = self.app.font_ui.render("Menü renkleri (skin)", True, UI_TEXT)
+        lab = self.app.font_ui.render("MenÃ¼ renkleri (skin)", True, UI_TEXT)
         surf.blit(lab, (SCREEN_W // 2 - lab.get_width() // 2, 118))
 
         self.skin_rects = []
@@ -96,7 +96,7 @@ class IconMenuScene(Scene):
                 lx = self.app.font_small.render("X", True, (200, 80, 90))
                 surf.blit(lx, lx.get_rect(center=r.center))
 
-        lab2 = self.app.font_ui.render("Oyun modu ikonları", True, UI_TEXT)
+        lab2 = self.app.font_ui.render("Oyun modu ikonlarÄ±", True, UI_TEXT)
         surf.blit(lab2, (SCREEN_W // 2 - lab2.get_width() // 2, 268))
 
         self._layout_mode_pills()
@@ -136,7 +136,7 @@ class IconMenuScene(Scene):
             )
 
         hint = self.app.font_small.render(
-            "Kilitli ikonlar mağazada. Mod seç → ikon seç.",
+            "Kilitli ikonlar maÄŸazada. Mod seÃ§ â†’ ikon seÃ§.",
             True,
             (150, 160, 185),
         )

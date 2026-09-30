@@ -1,4 +1,4 @@
-"""Ana hub — oyun benzeri kayar arka plan; ikonlar ayrı menüde."""
+﻿"""Ana hub â€” oyun benzeri kayar arka plan; ikonlar ayrÄ± menÃ¼de."""
 
 from __future__ import annotations
 
@@ -16,17 +16,17 @@ class HubScene(Scene):
         cx = SCREEN_W // 2
         y0 = 200
         gap = 20
-        self.btn_play = Button(pygame.Rect(cx - w // 2, y0, w, h), "Bölümler", self.app.font_large)
+        self.btn_play = Button(pygame.Rect(cx - w // 2, y0, w, h), "BÃ¶lÃ¼mler", self.app.font_large)
         self.btn_look = Button(
-            pygame.Rect(cx - w // 2, y0 + h + gap, w, h), "Görünüm (skin & ikon)", self.app.font_large
+            pygame.Rect(cx - w // 2, y0 + h + gap, w, h), "GÃ¶rÃ¼nÃ¼m (skin & ikon)", self.app.font_large
         )
         self.btn_settings = Button(
             pygame.Rect(cx - w // 2, y0 + (h + gap) * 2, w, h), "Ayarlar", self.app.font_large
         )
         self.btn_shop = Button(
-            pygame.Rect(cx - w // 2, y0 + (h + gap) * 3, w, h), "Mağaza", self.app.font_large
+            pygame.Rect(cx - w // 2, y0 + (h + gap) * 3, w, h), "MaÄŸaza", self.app.font_large
         )
-        self.btn_title = Button(pygame.Rect(36, 36, 180, 44), "Başlık ekranı", self.app.font_ui)
+        self.btn_title = Button(pygame.Rect(36, 36, 180, 44), "BaÅŸlÄ±k ekranÄ±", self.app.font_ui)
         self.bg_scroll = 0.0
 
     def handle(self, events: list[pygame.event.Event]) -> None:
@@ -83,7 +83,7 @@ class HubScene(Scene):
         surf.blit(coin, (SCREEN_W - coin.get_width() - 36, 40))
 
         tip = self.app.font_small.render(
-            "Arka plan oyun gibi kayar — skin/ikon için «Görünüm» menüsüne gir.",
+            "Arka plan oyun gibi kayar â€” skin/ikon iÃ§in Â«GÃ¶rÃ¼nÃ¼mÂ» menÃ¼sÃ¼ne gir.",
             True,
             (150, 165, 195),
         )
