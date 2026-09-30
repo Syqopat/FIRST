@@ -1,31 +1,31 @@
 # 🎮 FIRST (Pygame Platform Engine & Game)
 
-![Status](https://img.shields.io/badge/Durum-%C3%87al%C4%B1%C5%9F%C4%B1yor%20%2F%20Working-brightgreen?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Working%20%2F%20Stable-brightgreen?style=for-the-badge)
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge)
 ![Pygame](https://img.shields.io/badge/Pygame-CE-green?style=for-the-badge)
 ![CI](https://img.shields.io/badge/CI%2FCD-Active-success?style=for-the-badge)
 
-**FIRST**, Pygame tabanlı 2D platform oyun motoru ve oyun projesidir. Modüler sahne yönetimi (main menu, level menu, shop, gameplay), çarpışma kontrol sistemi ve seviye kaydetme özellikleri sunar.
+**FIRST** is a 2D platformer engine and game built with Pygame. It features a modular scene manager (Main Menu, Level Menu, Shop, Gameplay), collision detection, and JSON save progression.
 
 ---
 
-## 📌 Proje Durumu (Project Status)
+## 📌 Project Status
 
-- **Durum:** 🟢 **Çalışıyor (Working / Stable)**
-- **Test & CI/CD:** GitHub Actions syntax denetimi aktif.
-- **Konfigürasyon:** `config.json` ile çözünürlük, FPS ve ses seviyeleri ayarlanabilir.
-
----
-
-## 🚀 Özellikler
-
-- **Modüler Sahne Mimari:** Menü, seviye seçimi, market ve oyun sahneleri decoupled sınıflar halinde tasarlanmıştır.
-- **Karakter ve Görünüşler (Skins):** Market ve görünüm seçimi entegredir.
-- **Kaydetme Sistemi (`savegame.py`):** Oyuncu ilerlemesini JSON formatında saklar.
+- **Status:** 🟢 **Working / Stable**
+- **CI/CD:** Automated GitHub Actions syntax checking active.
+- **Configuration:** Resolution, FPS, and volume configurable via `config.json`.
 
 ---
 
-## 🛠️ Kurulum ve Kullanım
+## 🚀 Key Features
+
+- **Modular Scene Architecture:** Decoupled scene classes for UI, menus, shop, and gameplay.
+- **Skins & Customization:** In-game shop and character skin selection system.
+- **Save System (`savegame.py`):** Saves player progress in JSON format.
+
+---
+
+## 🛠️ Installation & Execution
 
 ```bash
 pip install -r requirements.txt
@@ -34,7 +34,7 @@ python main.py
 
 ---
 
-## ⚙️ Yapılandırma (`config.json`)
+## ⚙️ Configuration (`config.json`)
 
 ```json
 {
@@ -48,6 +48,6 @@ python main.py
 
 ---
 
-## 📄 Lisans
+## 📄 License
 
-MIT License
+Licensed under the MIT License.
